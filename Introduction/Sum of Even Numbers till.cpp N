@@ -1,0 +1,27 @@
+/*
+Given a number N, print sum of all even numbers from 1 to N.
+*/
+
+
+#include<iostream>
+using namespace std;
+
+
+int main(){
+
+    int n,d,sum=0;
+    cin>>n;
+    d=2;
+    while(d<=n){
+        if(d%2==0){
+            sum=sum+d;
+        }
+        d++;
+    }
+    cout<<sum;
+       	/*  
+		Read input as specified in the question.
+		Print output as specified in the question.
+	*/
+  
+}
