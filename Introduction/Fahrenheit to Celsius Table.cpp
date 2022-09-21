@@ -1,36 +1,48 @@
+/*Given three values - Start Fahrenheit Value (S), End Fahrenheit value (E) and Step Size (W), you need to convert all Fahrenheit values from Start to End at the gap of W, into their corresponding Celsius values and print the table.
+Input Format :
+3 integers - S, E and W respectively
+Output Format :
+Fahrenheit to Celsius conversion table. One line for every Fahrenheit and Celsius Fahrenheit value. Fahrenheit value and its corresponding Celsius value should be separate by tab ("\t")
+Constraints :
+0 <= S <= 1000
+0 <= E <= 1000
+0 <= W <= 1000
+Sample Input 1:
+0 
+100 
+20
+Sample Output 1:
+0   -17
+20  -6
+40  4
+60  15
+80  26
+100 37
+*/
 #include<iostream>
 using namespace std;
-
+#include "Solution.h"
 
 int main(){
-    int S,E,W;
-     int C;
-    cin>>S>>E>>W;
-        int n=(E-S)/W;
-    	int F=S;
- 
-            for(int i=1;i<=n+1;i++)
-            {
-               
-                	 C=(5.0/9)*(F-32);
-            		cout<<F<<" "<<C<<endl;
-           			 F=S+i*W;
-            } 
-    
-    // int s,e,w,c;
-//     cin>>s>>e>>w;
-//     while(s<=e){
-//        c=(5.0/9)*(s-32);
-//         cout<<s<<" "<<c<<endl;
-//         s=s+w;
-//     }
-     
-//    
-    
-       /*  Read input as specified in the question.
-	* Print output as specified in the question.
-	*/
-  return 0;
+    int start, end, step;
+    cin >> start >> end >> step;
+  
+    printTable(start, end, step);
+
 }
 
+
+void printTable(int start, int end, int step) {
+    /* Don't write main().
+     * Don't read input, it is passed as function argument.
+     * Print output and don't return it.
+     * Taking input is handled automatically.
+     */
+    int ans;
+    while(start<=end){
+     ans=(5.0/9)*(start-32);
+            cout<<start<<" "<<ans<<endl;
+                start=start+step;
+    }
+}
 
